@@ -7,6 +7,7 @@ use App\PublicUrl;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Validator;
 
 class PublicUrlsController extends Controller
 {
@@ -31,16 +32,21 @@ class PublicUrlsController extends Controller
      * Store a newly created public URL in the database.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return mixed
      */
     public function store(Request $request)
     {
         $shortCode="";
         $shortCodeArr = [];
-        request()->validate([
-            'long_url' => 'required|string',
+        $validator = Validator::make($request->all(), [
+            'long_url' => 'required|string|url',
             'short_code' => 'max:140'
         ]);
+
+        if ($validator->fails()) {
+            return response()->json(['success' => false, 'error' => $validator->messages()->first()]);
+        }
+
         if ($request->short_code != '') {
             $shortCode = strtolower($request->short_code);
         } else {
@@ -71,7 +77,7 @@ class PublicUrlsController extends Controller
 
     /**
      * Get ShortCode from the storage/wordlist/eff_short_wordlist_2_0.txt
-     * @return array [short code id, short code]
+     * @return mixed
      */
     public function getShortCode()
     {
@@ -128,7 +134,6 @@ class PublicUrlsController extends Controller
         return "";
     }
 
-
     /**
      * Check if Shortcode already used
      * @param string
@@ -136,9 +141,29 @@ class PublicUrlsController extends Controller
      */
     private function isCodeUsed($code){
         $codeIfUsed = PublicUrl::query()->where(['short_code' => $code])->first();
-        return ($codeIfUsed!=null) ? true : false ;
+        return ($codeIfUsed!=null);
 
     }
+
+    /**
+     * Redirect ShortURL to it's Long URL
+     * @param string
+     * @return mixed
+     */
+    public function redirect($code) {
+
+        $url = PublicUrl::query()->where(['short_code' => $code])->first();
+        if ( $url!=null) {
+            $url->increment('number_visit');
+            return redirect()->away($url->long_url);
+        } else {
+            abort(404);
+        }
+
+    }
+
+
+
 
 
 
