@@ -1,0 +1,36 @@
+body {
+    font-family: Source Sans Pro;
+    font-size:14px;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size:22pt;
+}
+
+a {
+    font-size:18pt;
+    text-decoration: underline;
+}
+
+img {
+    height:100px;
+    margin-left: 30px;
+    margin-top:30px;
+}
+
+
+.content {
+    background-color: #eeeeee;
+}
+
+
+.content .container .entry-content {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #555555;
+}
+
+.content .container .entry-content ul li {
+    list-style: none;
+}
