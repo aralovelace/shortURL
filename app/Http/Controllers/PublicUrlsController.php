@@ -53,7 +53,7 @@ class PublicUrlsController extends Controller
             if ($this->isCodeUsed($shortCode)) {
                 return response()->json(['success' => false, 'error' => 'Shortcode has been used please enter new one']);
             }
-            
+
         } else {
             $shortCodeArr = $this->getShortCode();
             $shortCode = $shortCodeArr[1];
@@ -129,7 +129,7 @@ class PublicUrlsController extends Controller
                         }
                     }
                 }
-                /* if no shortcode then ask user to enter short URL */
+                /* if no shortcode available in the txt file then ask user to enter short code manually */
                 return response()->json(['success' => false, 'error' => 'System Issue, Please enter Short URL']);
             }
 

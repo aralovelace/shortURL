@@ -1,7 +1,8 @@
 body {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size:14pt;
     background-color: #ffffff;
+    color:#555555;
 }
 
 h1 {
@@ -15,7 +16,7 @@ a {
 
 img.logo {
     height:100px;
-    
+
 }
 
 
@@ -27,7 +28,13 @@ img.logo {
 .content .container .entry-content {
     background-color: #ffffff;
     padding: 10px;
-    border: 1px solid #555555;
+    border-top: 1px solid #555555;
+    border-left: 1px solid #555555;
+    border-right: 1px solid #555555;
+}
+
+.content .container .last {
+    border-bottom: 1px solid #555555;
 }
 
 .content .container .entry-content ul li {
