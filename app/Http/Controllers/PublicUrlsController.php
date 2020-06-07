@@ -49,6 +49,11 @@ class PublicUrlsController extends Controller
 
         if ($request->short_code != '') {
             $shortCode = strtolower($request->short_code);
+            /* Check first if the shortcode exist */
+            if ($this->isCodeUsed($shortCode)) {
+                return response()->json(['success' => false, 'error' => 'Shortcode has been used please enter new one']);
+            }
+            
         } else {
             $shortCodeArr = $this->getShortCode();
             $shortCode = $shortCodeArr[1];
