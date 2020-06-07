@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Logo} from "./Logo/Logo";
-
+import ReactDOM from 'react-dom';
 
 
 class Header extends Component {
 
     render() {
         return (
-            <div>
+            <div key="logo" className="mt-5 ml-3">
                 <Logo />
             </div>
         )
