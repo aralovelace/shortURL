@@ -93362,7 +93362,7 @@ var Header = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         key: "logo",
-        className: "mt-5 mb-2 ml-3"
+        className: "mt-5 mb-4 ml-3"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_1__["Logo"], null));
     }
   }]);
@@ -93490,7 +93490,7 @@ var Logo = function Logo() {
     to: "/"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _public_images_hn_bit_logo_png__WEBPACK_IMPORTED_MODULE_2___default.a,
-    className: "block h-80 logo"
+    className: "block h-85 logo"
   })));
 };
 
@@ -93617,11 +93617,13 @@ var Main = /*#__PURE__*/function (_Component) {
             };
           });
 
-          _this3.state.shortUrls.splice(-1, 1);
+          if (_this3.state.shortUrls.length > 10) {
+            _this3.state.shortUrls.splice(-1, 1);
 
-          _this3.setState({
-            shortUrls: _this3.state.shortUrls
-          });
+            _this3.setState({
+              shortUrls: _this3.state.shortUrls
+            });
+          }
         } else {
           _this3.setState({
             error_message: resdata.error
@@ -93669,7 +93671,7 @@ var Main = /*#__PURE__*/function (_Component) {
   }, {
     key: "border",
     value: function border(index) {
-      return index == 9 ? "entry-content last" : "entry-content";
+      return index == this.state.shortUrls.length - 1 ? "entry-content last" : "entry-content";
     }
   }, {
     key: "render",
@@ -93856,7 +93858,7 @@ var ShortenedForm = /*#__PURE__*/function (_Component) {
         className: "col-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
-        className: "form-check-input mt-2",
+        className: "form-check-input mt-3",
         id: "is_it_private",
         name: "private",
         onChange: function onChange(e) {
@@ -93865,7 +93867,7 @@ var ShortenedForm = /*#__PURE__*/function (_Component) {
           });
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "form-check-label",
+        className: "form-check-label mt-2",
         "for": "is_it_private"
       }, "Private?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-2"

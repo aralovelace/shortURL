@@ -12,12 +12,27 @@ h1 {
 a {
     font-size:18pt;
     text-decoration: underline;
+    color: #2979bc;
 }
 
 img.logo {
     height:100px;
 
 }
+
+.btn, .form-control {
+    font-size:14pt;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-primary {
+    background-color: #2979bc;
+    border-color: #2979bc;
+}
+
+
+
+
 
 
 .content {

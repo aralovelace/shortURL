@@ -7,7 +7,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div key="logo" className="mt-5 mb-2 ml-3">
+            <div key="logo" className="mt-5 mb-4 ml-3">
                 <Logo />
             </div>
         )

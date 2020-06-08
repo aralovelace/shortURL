@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 export const Logo = () => (
     <h1 className="text-lg">
         <Link className="text-white no-underline" to="/">
-            <img src={HnbitLogo}   className="block h-80 logo" />
+            <img src={HnbitLogo}   className="block h-85 logo" />
         </Link>
     </h1>
 )

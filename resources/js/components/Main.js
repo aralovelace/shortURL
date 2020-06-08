@@ -61,9 +61,10 @@ class Main extends Component {
                     success_message: "Short URL successfully generated!",
                     new_short_link: resdata.data.short_code
                 }));
-
-                this.state.shortUrls.splice(-1,1);
-                this.setState( { shortUrls: this.state.shortUrls });
+                if (this.state.shortUrls.length > 10) {
+                    this.state.shortUrls.splice(-1, 1);
+                    this.setState({shortUrls: this.state.shortUrls});
+                }
 
             } else {
                 this.setState( { error_message: resdata.error });
@@ -113,7 +114,7 @@ class Main extends Component {
     }
 
     border(index) {
-        return (index==9) ? "entry-content last" : "entry-content";
+        return (index==(this.state.shortUrls.length-1)) ? "entry-content last" : "entry-content";
     }
 
     render() {

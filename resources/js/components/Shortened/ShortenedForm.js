@@ -64,12 +64,12 @@ class ShortenedForm extends Component {
                                 <div className="col-2">
                                     <input
                                         type="checkbox"
-                                        className="form-check-input mt-2"
+                                        className="form-check-input mt-3"
                                         id="is_it_private"
                                         name="private"
                                         onChange={e =>  this.setState( { private: e.target.checked })}
                                     />
-                                    <label className="form-check-label" for="is_it_private">Private?</label>
+                                    <label className="form-check-label mt-2" for="is_it_private">Private?</label>
                                 </div>
                                 <div className="col-2">
                                     <button type="submit" className="btn btn-primary pl-5 pr-5">Shorten</button>
