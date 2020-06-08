@@ -11,7 +11,7 @@ This web app allow a user to enter a valid URL and give back a shortened version
 - Frontend: React JS
 
 ## Note
-- For the Statistic, Please refer to the database under public_urls  number of visit column.
+- For the Statistic, Please refer to the database table: "public_urls"   column: (**number of visit**) .
 
 
 
