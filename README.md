@@ -69,6 +69,8 @@ Install node modules
 - `database/migrations` - Contains all the database migrations
 - `routes` - Contains all the api routes defined in api.php file
 - `tests` - Contains all the application tests
+- `resources/views/index.blade.php` - the only view file used to call the react scripts
+- `resources/js` - Contains all react javascript files
 
 ## Environment variables
 
