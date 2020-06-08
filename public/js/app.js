@@ -87638,6 +87638,17 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-flash-message/build/index.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/react-flash-message/build/index.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports=function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}return r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:n})},r.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=6)}([function(e,t,r){"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},function(e,t,r){"use strict";var n=function(e){};e.exports=function(e,t,r,o,i,u,s,a){if(n(t),!e){var c;if(void 0===t)c=new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var f=[r,o,i,u,s,a],l=0;(c=new Error(t.replace(/%s/g,function(){return f[l++]}))).name="Invariant Violation"}throw c.framesToPop=1,c}}},function(e,t,r){"use strict";function n(e){return function(){return e}}var o=function(){};o.thatReturns=n,o.thatReturnsFalse=n(!1),o.thatReturnsTrue=n(!0),o.thatReturnsNull=n(null),o.thatReturnsThis=function(){return this},o.thatReturnsArgument=function(e){return e},e.exports=o},function(e,t,r){"use strict";var n=r(2),o=r(1),i=r(0);e.exports=function(){function e(e,t,r,n,u,s){s!==i&&o(!1,"Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types")}function t(){return e}e.isRequired=e;var r={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t};return r.checkPropTypes=n,r.PropTypes=r,r}},function(e,t,r){e.exports=r(3)()},function(e,t){e.exports=__webpack_require__(/*! react */ "./node_modules/react/index.js")},function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var n=function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)if(Object.prototype.hasOwnProperty.call(e,r)){var n=Object.defineProperty&&Object.getOwnPropertyDescriptor?Object.getOwnPropertyDescriptor(e,r):{};n.get||n.set?Object.defineProperty(t,r,n):t[r]=e[r]}return t.default=e,t}(r(5)),o=r(4);function i(e){return(i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function u(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function s(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}var a=function(e){function t(e){var r;return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),(r=function(e,t){if(t&&("object"===i(t)||"function"==typeof t))return t;if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}(this,(t.__proto__||Object.getPrototypeOf(t)).call(this,e))).state={isVisible:!0},r.hide=r.hide.bind(s(r)),r.resumeTimer=r.resumeTimer.bind(s(r)),r.pauseTimer=r.pauseTimer.bind(s(r)),r}var r,o,a;return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,n.Component),r=t,(o=[{key:"componentDidMount",value:function(){this.remaining=this.props.duration,this.resumeTimer()}},{key:"componentWillUnmount",value:function(){clearTimeout(this.timer)}},{key:"hide",value:function(){this.setState({isVisible:!1})}},{key:"resumeTimer",value:function(){window.clearTimeout(this.timer),this.start=new Date,this.timer=setTimeout(this.hide,this.remaining)}},{key:"pauseTimer",value:function(){this.props.persistOnHover&&(clearTimeout(this.timer),this.remaining-=new Date-this.start)}},{key:"render",value:function(){var e=this.state.isVisible,t=this.props.children;return e?n.default.createElement("div",{onMouseEnter:this.pauseTimer,onMouseLeave:this.resumeTimer},t):null}}])&&u(r.prototype,o),a&&u(r,a),t}();a.defaultProps={duration:5e3,children:null,persistOnHover:!0},a.propTypes={children:o.node,duration:o.number,persistOnHover:o.bool};var c=a;t.default=c}]);
+
+/***/ }),
+
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -93351,7 +93362,7 @@ var Header = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         key: "logo",
-        className: "mt-5 ml-3"
+        className: "mt-5 mb-2 ml-3"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Logo_Logo__WEBPACK_IMPORTED_MODULE_1__["Logo"], null));
     }
   }]);
@@ -93507,6 +93518,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var moment_precise_range_plugin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment-precise-range-plugin */ "./node_modules/moment-precise-range-plugin/moment-precise-range.js");
 /* harmony import */ var moment_precise_range_plugin__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment_precise_range_plugin__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_flash_message__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-flash-message */ "./node_modules/react-flash-message/build/index.js");
+/* harmony import */ var react_flash_message__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_flash_message__WEBPACK_IMPORTED_MODULE_8__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -93539,6 +93552,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var Main = /*#__PURE__*/function (_Component) {
   _inherits(Main, _Component);
 
@@ -93552,8 +93566,12 @@ var Main = /*#__PURE__*/function (_Component) {
     _this = _super.call(this, props);
     _this.state = {
       loading: false,
-      shortUrls: []
+      shortUrls: [],
+      error_message: '',
+      success_message: '',
+      new_short_link: ''
     };
+    _this.handleAddUrl = _this.handleAddUrl.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -93574,6 +93592,43 @@ var Main = /*#__PURE__*/function (_Component) {
         });
       })["catch"](function (err) {
         error_message: 'There is an error';
+      });
+    }
+  }, {
+    key: "handleAddUrl",
+    value: function handleAddUrl(urlItem) {
+      var _this3 = this;
+
+      this.setState({
+        error_message: "",
+        success_message: "",
+        new_short_link: ""
+      });
+      _apis_ShortUrlApi__WEBPACK_IMPORTED_MODULE_5__["default"].add(urlItem).then(function (response) {
+        var resdata = response.data;
+        var dataToPush = [resdata.data];
+
+        if (resdata.success) {
+          _this3.setState(function (prevState) {
+            return {
+              shortUrls: dataToPush.concat(prevState.shortUrls),
+              success_message: "Short URL successfully generated!",
+              new_short_link: resdata.data.short_code
+            };
+          });
+
+          _this3.state.shortUrls.splice(-1, 1);
+
+          _this3.setState({
+            shortUrls: _this3.state.shortUrls
+          });
+        } else {
+          _this3.setState({
+            error_message: resdata.error
+          });
+        }
+      })["catch"](function (err) {
+        error_message: 'System Issue. Please Contact us';
       });
     }
   }, {
@@ -93605,7 +93660,7 @@ var Main = /*#__PURE__*/function (_Component) {
           preciseDiff = ranges[key] > 0 ? ranges[key] + " minute" : "";
           preciseDiff += ranges[key] > 1 ? "s" : "";
         } else if (key == 'seconds' && preciseDiff == "") {
-          preciseDiff = ranges[key] > 0 ? ranges[key] + " second" : "";
+          preciseDiff = ranges[key] + " second";
           preciseDiff += ranges[key] > 1 ? "s" : "";
         }
       });
@@ -93619,30 +93674,54 @@ var Main = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shortened_ShortenedForm__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "sweet-loading mt-3"
+        className: "container pt-5"
+      }, this.state.error_message ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_flash_message__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        duration: 60000,
+        persistOnHover: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "alert alert-danger"
+      }, this.state.error_message, ".")) : '', this.state.success_message ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_flash_message__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        duration: 60000,
+        persistOnHover: true
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "alert alert-success"
+      }, this.state.success_message, ".")) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shortened_ShortenedForm__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onAdd: this.handleAddUrl
+      }), this.state.new_short_link ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mb-3 mt-2 text-center p-3 bg-info text-white"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "Your Short URL is: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "text-light",
+        to: this.state.new_short_link,
+        target: "_blank"
+      }, window.location.protocol, "//", window.location.hostname, "/", this.state.new_short_link)) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "sweet-loading mt-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_spinners_ClipLoader__WEBPACK_IMPORTED_MODULE_4___default.a, {
         size: 150,
         color: "#123abc",
         loading: this.state.loading
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pb-5"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Recent Links"), this.state.shortUrls.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.shortUrls.map(function (link, index) {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "mb-1"
+      }, "Recent Links"), this.state.shortUrls.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.shortUrls.map(function (link, index) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: _this3.border(index)
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+          className: _this4.border(index)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: link.short_code
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
           to: link.short_code,
           target: "_blank"
-        }, window.location.protocol, "//", window.location.hostname, "/", link.short_code)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("time", null, _this3.displayDateRange(link.created_at), " ago"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        }, window.location.protocol, "//", window.location.hostname, "/", link.short_code)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("time", null, _this4.displayDateRange(link.created_at), " ago"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: link.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: link.long_url,
           target: "_blank"
-        }, link.long_url)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null)));
+        }, link.long_url))));
       })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "No Short URL has been generated yet!"))));
     }
   }]);
@@ -93667,6 +93746,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _apis_ShortUrlApi__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../apis/ShortUrlApi */ "./resources/js/components/apis/ShortUrlApi.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -93692,27 +93773,46 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
 var ShortenedForm = /*#__PURE__*/function (_Component) {
   _inherits(ShortenedForm, _Component);
 
   var _super = _createSuper(ShortenedForm);
 
-  function ShortenedForm() {
+  function ShortenedForm(props) {
+    var _this;
+
     _classCallCheck(this, ShortenedForm);
 
-    return _super.apply(this, arguments);
+    _this = _super.call(this, props);
+    _this.state = {
+      long_url: "",
+      short_url: "",
+      "private": 0
+    };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(ShortenedForm, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
+      var newUrlItem = {
+        long_url: this.state.long_url,
+        short_code: this.state.short_url,
+        "private": this.state["private"]
+      };
+      this.props.onAdd(newUrlItem);
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row pt-5 pb-5"
+        className: "row pb-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -93725,27 +93825,45 @@ var ShortenedForm = /*#__PURE__*/function (_Component) {
         type: "text",
         className: "form-control",
         placeholder: "Long URL (required)",
-        required: true
+        name: "long_url",
+        required: true,
+        value: this.state.long_url,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            long_url: e.target.value
+          });
+        }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         className: "form-control",
+        name: "short_url",
         placeholder: "Short URL (optional)",
-        required: true
+        value: this.state.short_url,
+        maxLength: 140,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            short_url: e.target.value
+          });
+        }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-1"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-check mt-1"
+        className: "col-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "checkbox",
-        "class": "form-check-input",
-        id: "is_it_private"
+        className: "form-check-input mt-2",
+        id: "is_it_private",
+        name: "private",
+        onChange: function onChange(e) {
+          return _this2.setState({
+            "private": e.target.checked
+          });
+        }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "class": "form-check-label",
+        className: "form-check-label",
         "for": "is_it_private"
-      }, "Private?"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-2 right"
+      }, "Private?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-2"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         className: "btn btn-primary pl-5 pr-5"
@@ -93756,7 +93874,7 @@ var ShortenedForm = /*#__PURE__*/function (_Component) {
   return ShortenedForm;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (ShortenedForm);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(ShortenedForm));
 
 /***/ }),
 
@@ -93775,6 +93893,9 @@ __webpack_require__.r(__webpack_exports__);
 var ShortUrlApi = {
   getRecent: function getRecent() {
     return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api');
+  },
+  add: function add(data) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api', data);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (ShortUrlApi);
