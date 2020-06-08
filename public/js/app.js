@@ -93804,6 +93804,11 @@ var ShortenedForm = /*#__PURE__*/function (_Component) {
         short_code: this.state.short_url,
         "private": this.state["private"]
       };
+      this.setState({
+        long_url: "",
+        short_url: "",
+        "private": 0
+      });
       this.props.onAdd(newUrlItem);
     }
   }, {

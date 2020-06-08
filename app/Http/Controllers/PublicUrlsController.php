@@ -51,7 +51,10 @@ class PublicUrlsController extends Controller
             $shortCode = strtolower($request->short_code);
             /* Check first if the shortcode exist */
             if ($this->isCodeUsed($shortCode)) {
-                return response()->json(['success' => false, 'error' => 'Shortcode has been used please enter new one']);
+                return response()->json([
+                    'success' => false,
+                    'error' => 'Shortcode has been used please enter new one. Suggestion: '.$this->suggestedWord($request->short_code),
+                ]);
             }
 
         } else {
@@ -165,6 +168,19 @@ class PublicUrlsController extends Controller
             abort(404);
         }
 
+    }
+
+    private function suggestedWord($word){
+        $exist = true;
+        $x = 1;
+        while($exist) {
+            $word = $word.$x;
+            if (!$this->isCodeUsed($word)){
+                $exist = false;
+            }
+            $x++;
+        }
+        return $word;
     }
 
 
