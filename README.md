@@ -71,6 +71,7 @@ Install node modules
 - `tests` - Contains all the application tests
 - `resources/views/index.blade.php` - the only view file used to call the react scripts
 - `resources/js` - Contains all react javascript files
+- `storage/wordlist` - Contain the txt file used for the shortcodes
 
 ## Environment variables
 
