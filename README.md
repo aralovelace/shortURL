@@ -6,9 +6,13 @@
 This web app allow a user to enter a valid URL and give back a shortened version using a human readable word or words as a substitute for their URL. 
 
 ## Technical Details:
-Server-Side: PHP/MySQL
-Framework: Laravel
-Frontend: React JS
+- Server-Side: PHP/MySQL
+- Framework: Laravel
+- Frontend: React JS
+
+## Note
+- For the Statistic, Please refer to the database under public_urls  number of visit column.
+
 
 
 # Getting started
