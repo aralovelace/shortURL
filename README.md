@@ -1,10 +1,10 @@
 #HN-BIT Shortened DEV Links
 
 
-##Description
+## Description
 This web app allow a user to enter a valid URL and give back a shortened version using a human readable word or words as a substitute for their URL. 
 
-##Technical Details:
+## Technical Details:
 Server-Side: PHP/MySQL
 Framework: Laravel
 Frontend: React JS
@@ -51,6 +51,40 @@ Run the database migrations (**Set the database connection in .env before migrat
 Install node modules
 
     npm install
+
+
+# Code overview
+
+## Package Dependencies (manually added)
+- react-moment
+- react-spinners
+- moment-precise-range-plugin
+
+## Folders
+
+- `app` - Contains all the Eloquent models
+- `app/Http/Controllers` - Contains all the api controllers
+- `config` - Contains all the application configuration files
+- `database/migrations` - Contains all the database migrations
+- `routes` - Contains all the api routes defined in api.php file
+- `tests` - Contains all the application tests
+
+## Environment variables
+
+- `.env` - Environment variables can be set in this file
+
+
+# Testing API
+
+Run the laravel development server
+
+    php artisan serve
+
+The api can now be accessed at
+
+    http://localhost:8000/api
+
+
 
 
 
