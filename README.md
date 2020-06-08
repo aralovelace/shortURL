@@ -1,5 +1,6 @@
-#HN-BIT Shortened DEV Links
+# HN-BIT Shortened DEV Links
 
+![GitHub Logo](https://aralovelace.files.wordpress.com/2020/06/screenshot-2020-06-08-at-02.06.42.png)
 
 ## Description
 This web app allow a user to enter a valid URL and give back a shortened version using a human readable word or words as a substitute for their URL. 
