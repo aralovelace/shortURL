@@ -120,7 +120,7 @@ class Main extends Component {
     render() {
         return (
             <div className="content">
-                <div className="container pt-5">
+                <div className="container">
                     {
                         this.state.error_message?
                             <FlashMessage duration={60000} persistOnHover={true}>
@@ -161,7 +161,7 @@ class Main extends Component {
                                             <ul>
                                                 <li key={link.short_code}><Link to={link.short_code} target="_blank">{window.location.protocol}//{window.location.hostname}/{link.short_code}</Link></li>
                                                 <time>{this.displayDateRange(link.created_at)} ago</time>
-                                                <li key={link.id}><a href={link.long_url} target="_blank">{link.long_url}</a></li>
+                                                <li key={link.id}><a href={link.long_url} target="_blank" class="text-muted">{link.long_url}</a></li>
                                             </ul>
                                         </div>
                                     )

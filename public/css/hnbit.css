@@ -30,15 +30,7 @@ img.logo {
     border-color: #2979bc;
 }
 
-
-
-
-
-
-.content {
-    background-color: #eeeeee;
-}
-
+.text-muted { font-size:14px; }
 
 .content .container .entry-content {
     background-color: #ffffff;
